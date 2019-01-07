@@ -1,4 +1,4 @@
-できるPRO MySQL できるPROシリーズ Kindle版
+[できるPRO MySQL できるPROシリーズ Kindle版] まとめ
 ===
 
 ## 概要

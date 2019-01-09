@@ -1,0 +1,26 @@
+03\_HowToUseDatabase
+===
+
+## 概要
+
+- データベースの使用方法についてまとめる。
+
+## `USE`
+
+### 概要
+
+- 参照するデータベースを指定する。
+- CLI操作の`cd`と同じイメージで使用する。
+
+### 文法
+
+`CREATE DATABASE データベース名`
+
+### サンプル
+
+```
+MariaDB [(none)]> USE dekirusample
+Database changed
+MariaDB [dekirusample]>
+```
+

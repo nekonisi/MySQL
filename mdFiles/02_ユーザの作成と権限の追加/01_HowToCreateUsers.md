@@ -1,0 +1,74 @@
+01\_HowToCreateUsers
+===
+
+## 概要
+
+- ユーザの作成方法と権限の追加方法についてまとめる。
+
+## `GRANT`
+
+### 概要
+
+- ユーザの作成と権限の付与を行う。
+
+### 文法
+
+`GRANT 権限 データベース名.テーブル名 TO ユーザ名@ホスト名 IDENTIFIED BY 'パスワード'`
+
+#### スコープについて
+
+- `データベース名.テーブル名`で指定するスコープについては，`*`を使用可能。
+
+|指定方法          |解説                                                    |
+|:----------------:|:------------------------------------------------------:|
+|`データベース名.*`|指定したデータベースのすべてのテーブルについて権限を付与|
+|`*.*`             |すべてのデータベースのすべてのテーブルについて権限を付与|
+
+#### 権限について
+
+- 権限の種類を下記にまとめる。
+
+##### 強い権限
+
+|権限            |許可するもの                  |
+|:--------------:|:----------------------------:|
+|`ALL PRIVILEGES`|すべての権限(GRANT OPTION以外)|
+|`GRANT OPTION`  |他のユーザの権限設定          |
+
+##### DDL関連
+
+|権限            |許可するもの                  |
+|:--------------:|:----------------------------:|
+|`CREATE`        |(データベースやテーブルの)作成|
+|`ALTER`         |テーブルのスキーマ変更        |
+|`INDEX`         |インデックスの作成や削除      |
+|`DROP`          |(データベースやテーブルの)削除|
+
+##### DML関連
+
+|権限            |許可するもの                  |
+|:--------------:|:----------------------------:|
+|`INSERT`        |INSERT命令                    |
+|`SELECT`        |SELECT命令                    |
+|`UPDATE`        |UPDATE命令                    |
+|`DELETE`        |DELETE命令                    |
+
+### サンプル
+
+```
+MariaDB [dekirusample]> GRANT ALL PRIVILEGES ON *.* TO nekonisi@localhost IDENTIFIED BY '*********';
+Query OK, 0 rows affected (0.00 sec)
+
+MariaDB [dekirusample]> exit
+Bye
+
+# mysql -u nekonisi -p
+Enter password: *********
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 6
+Server version: 10.1.37-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+```

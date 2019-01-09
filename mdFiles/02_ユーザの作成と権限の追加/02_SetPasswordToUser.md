@@ -1,0 +1,36 @@
+02\_SetPasswordToUser
+===
+
+## 概要
+
+- パスワードの設定方法をまとめる。
+
+## `GRANT`
+
+### 概要
+
+- `GRANT`によるパスワードの設定方法をまとめる。
+
+### 文法
+
+#### 1. ユーザの作成時にパスワードを設定する。
+
+`GRANT 権限 ON データベース名.テーブル名 TO ユーザ名 IDENTIFIED BY 'パスワード'`
+
+#### 2. 既存のユーザにパスワードを付与する
+
+`SET PASSWORD FOR ユーザ名@ホスト名='パスワード'`
+
+### サンプル1
+
+```
+MariaDB [dekirusample]> GRANT ALL PRIVILEGES ON *.* TO nekonisi@localhost IDENTIFIED BY '*********';
+Query OK, 0 rows affected (0.00 sec)
+```
+
+### サンプル2
+
+```
+MariaDB [(none)]> SET PASSWORD FOR root@localhost=PASSWORD('******');
+Query OK, 0 rows affected (0.00 sec)
+```

@@ -17,7 +17,7 @@ History
 ## 豆知識
 
 - MySQLのロゴであるイルカの名前は，"Sakila"
-![ロゴ](https://www.mysql.com/common/logos/logo-mysql-170x115.png)
+  ![ロゴ](https://www.mysql.com/common/logos/logo-mysql-170x115.png)
 - WindowsでMySQLサーバを起動した場合，サービス名は`SQL56`となる。
 
 ## MySQLの種類

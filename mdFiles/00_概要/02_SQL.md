@@ -4,8 +4,11 @@ SQL
 ## 概要
 
 - SQL文の種類についてまとめる。
+- SQL文の中の語の名称についてもまとめる。
 
-### DDL(Data Definision Language)
+### SQL文の種類について
+
+#### DDL(Data Definision Language)
 
 - 和訳: データ定義言語
 - データベース，テーブルなどの基本データを定義，作成する。
@@ -16,7 +19,7 @@ SQL
 |DROP  |(テーブルの)削除などに使用する。|
 |ALTER |(テーブルの)変更などに使用する。|
 
-### DML(Data Manupulation Language)
+#### DML(Data Manupulation Language)
 
 - 和訳: データ操作言語
 - DDLで定義したデータに対して，検索，挿入，削除，変更などの操作を行う。
@@ -28,7 +31,7 @@ SQL
 |DELETE |(データを)削除する。|
 |UPDATE |(データを)変更する。|
 
-### DCL(Data Control Language)
+#### DCL(Data Control Language)
 
 - 和訳: データ制御言語
 - データベースのユーザ権限の管理や，データのトランザクション処理を行う。
@@ -39,3 +42,16 @@ SQL
 |REVOKE  |(権限を)剥奪する。|
 |COMMIT  |(変更を)削除する。|
 |ROLLBACK|(変更を)変更する。|
+
+---
+
+### SQL文の中の語の名称について
+
+- SQL文内の語の名称についてまとめる
+
+|和名|ISO/IEC 9075|本書内|具体例     |
+|:--:|:----------:|:----:|:---------:|
+|文  |Statement   |命令  |`SELECT`等 |
+|句  |Clause      |句    |`WHERE`等  |
+|述語|Predicate   |演算子|`BETWEEN`等|
+

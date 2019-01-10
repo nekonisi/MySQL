@@ -7,18 +7,18 @@
 - 所要時間は約5日かける。
 
 
-## 00\_OverView
+## 00\_概要
 
-- [History.md](mdFiles/00_OverView/History.md)
-- [SQL.md](mdFiles/00_OverView/SQL.md)
+- [01\_歴史](mdFiles/00_OverView/History.md)
+- [02\_SQLについて](mdFiles/00_OverView/SQL.md)
 
 ## 01\_データベースの作成と使用
 
-- [01\_HowToCreateDB.md](mdFiles/01_データベースの作成と使用/01_HowToCreateDB.md)
-- [02\_HowToReferenceDataBase.md](mdFiles/01_データベースの作成と使用/02_HowToReferenceDataBase.md)
-- [03\_HowToUseDatabase.md](mdFiles/01_データベースの作成と使用/03_HowToUseDatabase.md)
+- [01\_データベースの作成](mdFiles/01_データベースの作成と使用/01_HowToCreateDB.md)
+- [02\_データベースの参照](mdFiles/01_データベースの作成と使用/02_HowToReferenceDataBase.md)
+- [03\_データベースの使用](mdFiles/01_データベースの作成と使用/03_HowToUseDatabase.md)
 
 ## 02\_ユーザの作成と権限の追加
 
-- [01\_HowToCreateUsers.md](mdFiles/02_ユーザの作成と権限の追加/01_HowToCreateUsers.md)
-- [02\_SetPasswordToUser.md](mdFiles/02_ユーザの作成と権限の追加/02_SetPasswordToUser.md)
+- [01\_ユーザの作成方法](mdFiles/02_ユーザの作成と権限の追加/01_HowToCreateUsers.md)
+- [02\_パスワードの設定](mdFiles/02_ユーザの作成と権限の追加/02_SetPasswordToUser.md)

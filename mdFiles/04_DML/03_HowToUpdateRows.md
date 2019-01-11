@@ -17,4 +17,58 @@
 
 ### サンプル
 
-- 文字化けが解消しないので保留
+#### 更新前確認
+
+```SQL
+SELECT * FROM MEMBERS;
+```
+
+- 実行結果
+
+```
+MariaDB [dekirusample]> SELECT * FROM MEMBERS;
++-------+----------+--------+
+| memno | name     | pref   |
++-------+----------+--------+
+|     1 | 高橋正和 | 東京都 |
+|     2 | 山本陽一 | 北海道 |
+|     3 | 杉本彰大 | 福岡県 |
+|     4 | 石橋克隆 | NULL   |
++-------+----------+--------+
+4 rows in set (0.00 sec)
+```
+
+#### 更新実行
+
+```SQL
+UPDATE MEMBERS SET name='たかはしまさかず', pref='神奈川県' WHERE memno=1;
+```
+
+- 実行結果
+
+```
+MariaDB [dekirusample]> UPDATE MEMBERS SET name='たかはしまさかず', pref='神奈川県' WHERE memno=1;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+```
+
+#### 更新後確認
+
+```SQL
+SELECT * FROM MEMBERS;
+```
+
+- 実行結果
+
+```
+MariaDB [dekirusample]> select * from members;
++-------+------------------+----------+
+| memno | name             | pref     |
++-------+------------------+----------+
+|     1 | たかはしまさかず | 神奈川県 |
+|     2 | 山本陽一         | 北海道   |
+|     3 | 杉本彰大         | 福岡県   |
+|     4 | 石橋克隆         | NULL     |
++-------+------------------+----------+
+4 rows in set (0.00 sec)
+```

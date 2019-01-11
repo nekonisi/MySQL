@@ -48,6 +48,8 @@
 
 ### サンプル
 
+#### テーブルの作成
+
 ```SQL
 CREATE TABLE members (
 		memno INT,
@@ -56,7 +58,7 @@ CREATE TABLE members (
 		);
 ```
 
-- CREATE文の実行
+- 実行結果
 
 ```
 MariaDB [dekirusample]> CREATE TABLE members (
@@ -67,7 +69,11 @@ MariaDB [dekirusample]> CREATE TABLE members (
 Query OK, 0 rows affected (0.08 sec)
 ```
 
-- `SHOW TABLES`で確認
+### 実行後確認
+
+```SQL
+SHOW TABLES;
+```
 
 ```
 MariaDB [dekirusample]> show tables;

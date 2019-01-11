@@ -23,7 +23,9 @@
 
 `INSERT INTO テーブル名 (列名1, 列名2, ...) VALUES (値, ...), (値, ...),... `
 
-### サンプル1
+### サンプル
+
+#### データの挿入(列名指定なし)
 
 ```SQL
 INSERT INTO members VALUES
@@ -32,13 +34,15 @@ INSERT INTO members VALUES
 (3, '杉本彰大', '福岡県');
 ```
 
+- 実行結果
+
 ```
 MariaDB [dekirusample]> INSERT INTO members VALUES(1, '高橋正和', '東京都'),(2, '山本陽一', '北海道'),(3, '杉本彰大', '福岡県');
 Query OK, 3 rows affected, 6 warnings (0.01 sec)
 Records: 3  Duplicates: 0  Warnings: 6
 ```
 
-### サンプル2
+#### データの挿入(列名指定あり)
 
 ```SQL
 INSERT INTO members
@@ -46,15 +50,30 @@ INSERT INTO members
 (4, '石橋克隆');
 ```
 
+- 実行結果
+
 ```
 MariaDB [dekirusample]> INSERT INTO members(memno, name) VALUES(4, '石橋克隆');
 Query OK, 1 row affected, 1 warning (0.02 sec)
 ```
 
-- 実行結果確認
+#### 実行後確認
 
 ```SQL
 SELECT * FROM members;
 ```
 
-- 文字化けしているので，後日記述する。
+- 実行結果
+
+```
+MariaDB [dekirusample]> select * from members;
++-------+----------+--------+
+| memno | name     | pref   |
++-------+----------+--------+
+|     1 | 高橋正和 | 東京都 |
+|     2 | 山本陽一 | 北海道 |
+|     3 | 杉本彰大 | 福岡県 |
+|     4 | 石橋克隆 | NULL   |
++-------+----------+--------+
+4 rows in set (0.00 sec)
+```

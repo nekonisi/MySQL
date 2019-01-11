@@ -9,8 +9,8 @@
 
 ## 00\_概要
 
-- [01\_歴史](mdFiles/00_OverView/01_History.md)
-- [02\_SQLについて](mdFiles/00_OverView/02_SQL.md)
+- [01\_歴史](mdFiles/00_概要/01_History.md)
+- [02\_SQLについて](mdFiles/00_概要/02_SQL.md)
 
 ## 01\_データベースの作成と使用
 

@@ -5,7 +5,7 @@ rootDir=`pwd`;
 	# 現階層の*.mdファイルを配列に格納
 	function CreateMdFilesArrayList(){
 		local mdFilesArray=();
-		mdFilesArray+=(`find *.md`);
+		mdFilesArray+=(`ls`);
 		echo ${mdFilesArray[@]};
 	}
 
@@ -26,13 +26,14 @@ rootDir=`pwd`;
 		local linkString;
 
 		if [ ${dirName} != "." ] && [ ${dirName} != "./mdFiles" ]; then
-			header="## "${dirName#./mdFiles/}"\n";
+			header="## "${dirName#mdFiles/}"\n";
 			header=${header/_/\\_};
 			linkString+=${header};
 
 			for argsNo in `seq 1 ${argsCount}`;do
 				local fileName=${args[${argsNo}]};
-				linkString+="["${fileName/_/\\_/}"]";
+				pageName=${fileName/.md};
+				linkString+="["${pageName/_/\\_/}"]";
 				linkString+="("${dirName#./}"/"${fileName}")\n";
 			done
 		fi
@@ -48,7 +49,7 @@ function Main(){
 	head -n 9 README.md > README_WK.md;
 
 	# 下の階層のフォルダに移動する。
-	for dir in `find -type d`; do 
+	for dir in `find mdFiles -type d`; do 
 		pushd ${dir} 2>&1>/dev/null;
 
 		# 現階層の*.mdファイルを配列に格納

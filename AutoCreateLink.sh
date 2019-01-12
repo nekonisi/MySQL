@@ -33,7 +33,7 @@ rootDir=`pwd`;
 			for argsNo in `seq 1 ${argsCount}`;do
 				local fileName=${args[${argsNo}]};
 				pageName=${fileName/.md};
-				linkString+="["${pageName/_/\\_/}"]";
+				linkString+="- ["${pageName/_/\\_/}"]";
 				linkString+="("${dirName#./}"/"${fileName}")\n";
 			done
 		fi

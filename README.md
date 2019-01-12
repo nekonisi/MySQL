@@ -8,33 +8,30 @@
 
 
 ## 00\_概要
-
-- [01\_歴史](mdFiles/00_概要/01_History.md)
-- [02\_SQLについて](mdFiles/00_概要/02_SQL.md)
+[01\_/MySQLについて](mdFiles/00_概要/01_MySQLについて.md)
+[02\_/SQLについて](mdFiles/00_概要/02_SQLについて.md)
 
 ## 01\_データベースの作成と使用
-
-- [01\_データベースの作成](mdFiles/01_データベースの作成と使用/01_HowToCreateDB.md)
-- [02\_データベースの参照](mdFiles/01_データベースの作成と使用/02_HowToReferenceDataBase.md)
-- [03\_データベースの使用](mdFiles/01_データベースの作成と使用/03_HowToUseDatabase.md)
+[01\_/データベースの作成方法](mdFiles/01_データベースの作成と使用/01_データベースの作成方法.md)
+[02\_/データベースの参照方法](mdFiles/01_データベースの作成と使用/02_データベースの参照方法.md)
+[03\_/データベースの使用法](mdFiles/01_データベースの作成と使用/03_データベースの使用法.md)
 
 ## 02\_ユーザの作成と権限の追加
-
-- [01\_ユーザの作成方法](mdFiles/02_ユーザの作成と権限の追加/01_HowToCreateUsers.md)
-- [02\_パスワードの設定](mdFiles/02_ユーザの作成と権限の追加/02_SetPasswordToUser.md)
-
+[01\_/ユーザの作成方法](mdFiles/02_ユーザの作成と権限の追加/01_ユーザの作成方法.md)
+[02\_/パスワードの設定方法](mdFiles/02_ユーザの作成と権限の追加/02_パスワードの設定方法.md)
 
 ## 03\_テーブルの作成
-
-- [01\_テーブルの作成方法](mdFiles/03_テーブルの作成/01_HowToCreateTable.md)
+[01\_/テーブルの作成方法](mdFiles/03_テーブルの作成/01_テーブルの作成方法.md)
 
 ## 04\_DML
-
-- [INSERT文](mdFiles/04_DML/01_HowToInsertRow.md)
-- [SELECT文](mdFiles/04_DML/02_HowToReferencdRows.md)
-- [UPDATE文](mdFiles/04_DML/03_HowToUpdateRows.md)
-- [DELETE文](mdFiles/04_DML/04_HowToDeleteRows.md)
+[01\_/データの挿入](mdFiles/04_DML/01_データの挿入.md)
+[02\_/データの参照](mdFiles/04_DML/02_データの参照.md)
+[03\_/データの更新](mdFiles/04_DML/03_データの更新.md)
+[04\_/データの削除](mdFiles/04_DML/04_データの削除.md)
 
 ## 05\_DDL
+[01\_/テーブル定義の変更](mdFiles/05_DDL/01_テーブル定義の変更.md)
+[02\_/テーブルやデータベースの削除](mdFiles/05_DDL/02_テーブルやデータベースの削除.md)
 
-- [ALTER文](mdFiles/05_DDL/01_HowToChangeTableDefines.md)
+## 06\_サンプルデータベースを使用したデータ検索
+

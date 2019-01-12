@@ -25,4 +25,40 @@
 
 ### サンプルコード
 
-- 文字化けを解消してから記述する。
+#### テーブル定義を変更
+
+```SQL
+ALTER TABLE members CHANGE pref district VARCHAR(4);
+```
+
+- 実行結果
+
+```
+MariaDB [dekirusample]> ALTER TABLE members CHANGE pref district VARCHAR(4);
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+```
+
+#### 変更内容を確認
+
+```SQL
+SHOW COLUMNS FROM members;
+```
+
+- 実行結果
+
+```
+MariaDB [dekirusample]> SHOW COLUMNS FROM members;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| memno    | int(11)     | YES  |     | NULL    |       |
+| name     | varchar(16) | YES  |     | NULL    |       |
+| district | varchar(4)  | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.05 sec)
+```
+
+- `pref`を`district`に変更
+  - `pref` : 県
+  - `district` : 地区

@@ -1,0 +1,83 @@
+02\_HowToDeleteTableAndDatabase
+===
+
+## 概要
+
+- テーブルやデータベースの削除方法をまとめる。
+
+## `DROP'
+
+### 概要
+
+- テーブルやデータベースを削除する。
+- `DELETE`文は，テーブル内の行を削除する為に使用するので区別すること。
+
+### 文法
+
+`DROP TABLE テーブル名`
+`DROP DATABASE データベース名`
+
+### サンプルコード
+
+#### テーブルを削除
+
+```SQL
+DROP TABLE members;
+```
+
+- 実行結果
+
+```
+MariaDB [dekirusample]> DROP TABLE members;
+Query OK, 0 rows affected (0.10 sec)
+```
+
+##### 実行内容確認
+
+```SQL
+SHOW TABLES;
+```
+
+- 実行結果
+
+```
+MariaDB [dekirusample]> SHOW TABLES;
+Empty set (0.00 sec)
+```
+
+#### データベースを削除
+
+```SQL
+DROP DATABASE dekirusample;
+```
+
+- 実行結果
+
+```
+MariaDB [dekirusample]> DROP DATABASE dekirusample;
+Query OK, 0 rows affected (0.06 sec)
+```
+
+###### 実行内容確認
+
+```SQL
+SHOW DATABASES;
+```
+
+- 実行結果
+  - `dekirusample`データベースが削除されていることを確認
+
+```
+MariaDB [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| book_diary_db      |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+```
